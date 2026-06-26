@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* ------------------------------------
+
+------------------------------------ */
+:root {
+  --navy-deep: #0E1F3A;
+  --navy: #122036;
+  --ice: #EAF0F6;
+  --slate-cool: #6F84A3;
+  --line: #DBE3EB;
+  --primary: #F2A23A;
+  --primary-hover: #F4AE52;
+}
+
+/* ------------------------------------
+
+------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #ffffff;
+    color: var(--navy-deep);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: "Archivo", sans-serif;
+  }
+}
+
+/* ------------------------------------
+
+------------------------------------ */
+@layer utilities {
+
+  .container-page {
+    width: 100%;
+    max-width: 1216px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: var(--navy-deep);
+    font-weight: 700;
+    padding: 0.85rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 8px 24px -8px rgba(242, 162, 58, 0.5);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    background: var(--primary-hover);
+    box-shadow: 0 12px 28px -6px rgba(242, 162, 58, 0.6);
+  }
+
+  .btn-ghost-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--ice);
+    border: 1px solid rgba(234, 240, 246, 0.25);
+    font-weight: 600;
+    padding: 0.85rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
+  }
+  .btn-ghost-light:hover {
+    background: #ffffff;
+    color: var(--navy-deep);
+    border-color: #ffffff;
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--primary);
+    text-transform: uppercase;
+  }
+}
